@@ -11,6 +11,7 @@
   --margin-card-minus: -30px;
   --count-card: 4;
   --time-func-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  --half-transparent-color: rgba(255, 255, 255, 0.6);
 }
 
 p,
@@ -468,7 +469,7 @@ body {
 
 .address {
   font-style: normal;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--half-transparent-color);
 }
 
 .address-company {
@@ -510,6 +511,45 @@ body {
 .footer-soc-link {
   fill: var(--white-color);
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-email-form {
+  margin-left: 95px;
+}
+
+.email-form {
+  width: 360px;
+  height: 50px;
+  background-color: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  padding-left: 15px;
+}
+
+.email-form::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  color: var(--half-transparent-color);
+
+  /* padding-left: 15px; */
+}
+
+.email-form:not(:placeholder-shown) {
+  color: var(--white-color);
+}
+
+.button-subscribe {
+  width: 200px;
+  height: 50px;
+  margin-left: 10px;
+
+  background: var(--blue-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 /* ____________________________ PORTFOLIO ________________ */
