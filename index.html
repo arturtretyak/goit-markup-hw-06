@@ -668,25 +668,30 @@
             id="comment"
             placeholder="Уведіть текст"
           ></textarea>
-          <span width="16px" height="15px" class="thumb-input check-political">
+          <div class="block-privacy">
             <input
-              class="check"
+              class="check visually-hidden"
               type="checkbox"
               name="check"
+              value="true"
               id="check"
               required
             />
-            <svg class="check-icon" width="16px" height="15px">
-              <use href="./images/icons.svg#icon-check"></use>
-            </svg>
-          </span>
-          <label for="check">
-            Погоджуюся з розсилкою та приймаю
-            <a href="" rel="noopener nofollow noreferrer" class="check-link"
-              >Умови договору</a
-            >
-          </label>
-          <button class="button-send-form" type="submit">Надіслати</button>
+            <label class="label-check" for="check">
+              <span class="thumb-input thumb-check">
+                <svg class="check-icon" width="16px" height="15px">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              Погоджуюся з розсилкою та приймаю &nbsp;
+              <a href="" rel="noopener nofollow noreferrer" class="check-link"
+                >Умови договору</a
+              >
+            </label>
+          </div>
+          <div class="block-send-form">
+            <button class="button-send-form" type="submit">Надіслати</button>
+          </div>
         </form>
       </div>
     </div>
