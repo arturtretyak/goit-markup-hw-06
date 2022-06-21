@@ -595,40 +595,98 @@
         </div>
         <div class="footer-email-form">
           <h2 class="title-social-links">Підпишіться на розсилку</h2>
-          <form>
+          <form class="form-email">
             <input
-              type="text"
+              type="email"
+              name="email"
               placeholder="E-mail"
               required
-              class="email-form"
+              class="email-form-input"
             />
-            <button type="submit" class="button-subscribe">Підписатися</button>
+            <button type="submit" class="button-subscribe">
+              <span>Підписатися</span>
+              <svg class="icon-send-btn" width="25px" height="25px">
+                <use href="./images/icons.svg#icon-send-btn"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
-      <div class="order-form">
+      <div class="order-form-block">
         <button type="button" class="close-button" data-modal-close>
           <svg class="close-icon" width="18px" height="18px">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
-        <h2>Залиште ваші данні, ми Вам зателефонуємо</h2>
-        <form>
-          <legend>Ім'я</legend>
-          <input type="text" required />
-          <legend>Телефон</legend>
-          <input type="text" required />
-          <legend>Пошта</legend>
-          <input type="text" required />
-          <legend>Коментар</legend>
-          <input type="text" required />
-          <input type="checkbox" required />
-          <legend>
+        <h2 class="title-order">Залиште ваші данні, ми Вам зателефонуємо</h2>
+        <form class="order-form">
+          <label class="title-input" for="username">Ім'я</label>
+          <div class="thumb-input">
+            <input
+              class="order-input-text"
+              type="text"
+              name="name"
+              id="username"
+              required
+            />
+            <svg class="icon-input" width="18px" height="18px">
+              <use href="./images/icons.svg#icon-person"></use>
+            </svg>
+          </div>
+          <label class="title-input" for="tel">Телефон</label>
+          <div class="thumb-input">
+            <input
+              class="order-input-text"
+              type="tel"
+              name="tel"
+              id="tel"
+              required
+            />
+            <svg class="icon-input" width="18px" height="18px">
+              <use href="./images/icons.svg#icon-tel"></use>
+            </svg>
+          </div>
+          <label class="title-input" for="email">Пошта</label>
+          <div class="thumb-input">
+            <input
+              class="order-input-text"
+              type="email"
+              name="email"
+              id="email"
+              required
+            />
+            <svg class="icon-input" width="18px" height="18px">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+          </div>
+          <label class="title-input" for="comment">Коментар</label>
+          <textarea
+            class="order-input-textarea"
+            name="comment"
+            id="comment"
+            placeholder="Уведіть текст"
+          ></textarea>
+          <span width="16px" height="15px" class="thumb-input check-political">
+            <input
+              class="check"
+              type="checkbox"
+              name="check"
+              id="check"
+              required
+            />
+            <svg class="check-icon" width="16px" height="15px">
+              <use href="./images/icons.svg#icon-check"></use>
+            </svg>
+          </span>
+          <label for="check">
             Погоджуюся з розсилкою та приймаю
-            <a href="" rel="noopener nofollow noreferrer">Умови договору</a>
-          </legend>
+            <a href="" rel="noopener nofollow noreferrer" class="check-link"
+              >Умови договору</a
+            >
+          </label>
+          <button class="button-send-form" type="submit">Надіслати</button>
         </form>
       </div>
     </div>

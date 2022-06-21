@@ -418,14 +418,20 @@
         </div>
         <div class="footer-email-form">
           <h2 class="title-social-links">Підпишіться на розсилку</h2>
-          <form>
+          <form class="form-email">
             <input
-              type="text"
+              type="email"
+              name="email"
               placeholder="E-mail"
               required
-              class="email-form"
+              class="email-form-input"
             />
-            <button type="submit" class="button-subscribe">Підписатися</button>
+            <button type="submit" class="button-subscribe">
+              <span>Підписатися</span>
+              <svg class="icon-send-btn" width="25px" height="25px">
+                <use href="./images/icons.svg#icon-send-btn"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
